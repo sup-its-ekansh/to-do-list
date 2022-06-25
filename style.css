@@ -1,0 +1,261 @@
+* {
+    /* font-family: 'Aleo', serif; */
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    border: solid #19cd67;
+    z-index: 1;
+}
+
+body {
+    margin: 0%;
+}
+
+ul {
+    top: 0;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+.rightAlign {
+    float: right;
+}
+
+li a {
+    display: block;
+    margin: 2px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 19px;
+}
+
+li a:hover {
+    background-color: yellowgreen;
+    cursor: default;
+}
+
+.box {
+    margin-top: 5px;
+    /* border: solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+}
+
+.firstBox {
+    margin-top: 5px;
+    /* border: solid black; */
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: space-between;
+    /* overflow: hidden; */
+    /* gap: 0; */
+}
+
+.innerFirstBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#image {
+    width: 20vw;
+    height: auto;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+.midBox {
+    /* border: solid black; */
+    width: 85%;
+    height: 250px;
+    margin-top: 16%;
+    margin-bottom: 10px;
+}
+
+#button {
+    color: rgb(6, 6, 6);
+    padding: 2px 17px;
+}
+
+.signUp {
+    background-color: #040203;
+    border-radius: 13px;
+    display: inline-block;
+
+}
+
+#midEle {
+    color: #19cd67;
+}
+
+p {
+    text-align: center;
+    font-size: calc(1vw + 1vmin);
+}
+
+h1 {
+    font-size: calc(2vw + 1vh + 1vmin);
+}
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+#signUpBox {
+    background-color: #ffffff;
+    border: solid black;
+    position: relative;
+    max-width: 300px;
+    display: none;
+    z-index: 3;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin: auto;
+    padding: 10px;
+
+}
+
+#loginBox {
+    background-color: #ffffff;
+    border: solid black;
+    position: relative;
+    max-width: 300px;
+    display: none;
+    z-index: 3;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin: auto;
+    padding: 10px;
+
+}
+
+.center {
+    text-align: center;
+}
+
+form input,
+button {
+    /* padding: px; */
+    width: 80%;
+    margin: auto;
+    margin: 7px;
+}
+
+.faviIcon {
+    border-radius: 37px;
+    width: 27px;
+    margin: 0 5px;
+}
+
+.signInPics {
+    display: flex;
+    justify-content: center;
+
+}
+
+#heading{
+    font-size: 45px;
+    font-family: Manrope,sans-serif;
+    font-weight: 900;
+}
+
+.ele1{
+    display: inline-block;
+    padding-right: 60%;
+    margin-top: 3%;
+}
+
+.ele2{
+    background-color: #286251;
+    border: 4px solid green;
+    border-radius: 25px;
+    display: inline-block;
+    height: 71vh;
+    width: 25vw;
+    margin-top: 3%;
+    margin-left: -50%;
+    padding: 0px 58px 79px;
+}
+
+
+.ele2 p{
+    text-align: left;
+}
+.ele2 img{
+    position: relative;
+    left: 189%;
+    bottom: 75%;
+    width: 120%;
+    /* overflow: hidden; */
+    
+}
+
+.ele h2{
+    text-align: center;
+}
+
+button {
+    border-radius: 4px;
+    background-color: #c9f9da;
+    border: none;
+    color: #fff;
+    text-align: center;
+    font-size: 32px;
+    padding: 16px;
+    width: 220px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 36px;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+  }
+  
+  button{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  button:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;  
+    top: 14px;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  button:hover{
+    padding-right: 24px;
+    padding-left:8px;
+  }
+  
+  button:hover:after {
+    opacity: 1;
+    right: 10px;
+  }

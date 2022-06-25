@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-Page</title>
+    <link rel="stylesheet" href="toDoStyle.css">
+</head>
+
+<body>
+    <div id="overlay">
+        <span id="taskMenu">
+            <div id="upperTaskMenu">
+                <div id="leftTaskMenu">
+                    <input type="text" id="taskHead" placeholder="I want to..">
+                    <Label>Notes</Label>
+                    <input type="text" id="taskNote" placeholder="Insert your notes here">
+                </div>
+                <div id="rightTaskMenu">
+                    <Label>Category</Label>
+                    <ul>
+                        <li>Personal</li>
+                        <li>Work</li>
+                    </ul>
+                    <Label>Time</Label>
+                    <p>Set Time</p>
+                    <Label>Tags</Label>
+                    <button>Add Tag</button>
+                </div>
+            </div>
+            <div id="lowerTaskMenu">
+                <button id="addTask">Add Task</button>
+                <button onclick="cancel()">Cancel</button>
+            </div>
+
+        </span>
+    </div>
+    <div id="outerBody">
+        <div class="border" id="menu">
+            <span id="avatar">
+                <div id="avatarImage"></div>
+                <div id="name" class="center">Lorem ipsum</div>
+            </span>
+            <br>
+            <button onclick="addTask()">+ Create Task</button>
+            <!-- <div>Add task</div> -->
+            <br>
+            <label for="dayList">
+                <h4>Shortuct</h4>
+            </label>
+            <ul>
+                <li>Today</li>
+                <li>All Tasks</li>
+                <li>Completed Task</li>
+            </ul>
+            <label for="Category">
+                <h4>Category</h4>
+            </label>
+            <ul>
+                <li>Personal</li>
+                <li>Work</li>
+            </ul>
+            <label for="dayList">
+                <h4>Tags</h4>
+            </label>
+            <ul>
+                <li>#Priority</li>
+
+            </ul>
+
+        </div>
+        <div class="border" id="body">
+            <h1>Main Body</h1>
+        </div>
+    </div>
+
+</body>
+<script src="script.js"></script>
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
+import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-firestore.js";
+const firebaseConfig = {
+      apiKey: "AIzaSyCGwfjK3eD5l56-RSof9rn5cJgEVrC6Udc",
+      authDomain: "to-do-project-ff177.firebaseapp.com",
+      projectId: "to-do-project-ff177",
+      storageBucket: "to-do-project-ff177.appspot.com",
+      messagingSenderId: "38152615990",
+      appId: "1:38152615990:web:02d255d08822c59a300097"
+    };
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    const addTask = document.getElementById("addTask");
+    addTask.addEventListener("click", async (a)=>{
+        var taskHead=document.getElementById("taskHead").value;
+        var taskNote=document.getElementById("taskNote").value;
+        var taskTime=document.getElementById("taskTime").value;
+        var taskCategory=document.getElementById("taskCategory").value;
+        var tasktag=document.getElementById("tasktag").value;
+        // console.log("hi");
+        try {
+            const docRef = await addDoc(collection(db, "todoList"), {
+            head: taskHead,
+            note: taskNote,
+            time: taskNote,
+            category: taskCategory,
+            tags: tasktag
+        });
+        console.log("Document written with ID: ", docRef.id);
+        } catch (e) {
+        console.error("Error adding document: ", e);
+        }
+        cancel();
+    })
+    
+</script>
+
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First-Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mq.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aleo&family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="overlay">
+      <div id="signUpBox">
+        <form id="signUpForm">
+          <div
+            style="text-align: right; margin-right: 15px; cursor: pointer"
+            onclick="signUpOff()"
+          >
+            ✕
+          </div>
+          <h1 class="center">Sign Up</h1>
+          <hr />
+          <label for="email"><b>Email</b></label>
+          <input type="email" placeholder="Enter Email" required />
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" required />
+          <div>
+            <button type="submit">Sign Up</button>
+          </div>
+          <p>
+            Already a member?<a
+              onclick="alreadyMember()"
+              style="color: dodgerblue"
+              >Login</a
+            >
+          </p>
+          <h5 class="center">or</h5>
+          <div class="signInPics">
+            <img
+              src="Images/google.jpg"
+              id="gImg"
+              alt="google.com"
+              class="faviIcon"
+              style="cursor: pointer"
+            />
+          </div>
+        </form>
+      </div>
+      <div id="loginBox">
+        <form id="loginForm">
+          <div
+            style="text-align: right; margin-right: 15px; cursor: pointer"
+            onclick="loginOff()"
+          >
+            ✕
+          </div>
+          <h1 class="center">Login</h1>
+          <hr />
+          <label for="email"><b>Email</b></label>
+          <input type="email" placeholder="Enter Email" required />
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" required />
+          <div>
+            <button type="submit">Login</button>
+          </div>
+          <h5 class="center">or</h5>
+          <div class="signInPics">
+            <img
+              src="Images/google.jpg"
+              id="gImg"
+              alt="google.com"
+              class="faviIcon"
+              style="cursor: pointer"
+            />
+            <!-- <img src="Images/facebook.png" alt="facebook.com" class="faviIcon"
+                        style="cursor: pointer;"><img src="Images/twitter.png" alt="twitter.com" class="faviIcon"
+                        style="cursor: pointer;"> -->
+          </div>
+        </form>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li class="rightAlign" onclick="signUpOn()"><a>Sign Up</a></li>
+        <li class="rightAlign" onclick="loginOn()"><a>Login</a></li>
+      </ul>
+    </nav>
+    <div>
+      <div class="firstBox">
+        <img id="image" src="Images\6.png" alt="Main Image here" />
+        <div class="innerFirstBox">
+          <span class="ele">
+            <h1>Task manager for <strong id="midEle">Hustler</strong></h1>
+          </span>
+          <span class="ele">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.<br />
+              Laboriosam possimus ex debitis odio delectus obcaecati velit,<br />
+              id earum harum dolore?
+            </p>
+          </span>
+          <button id="button" onclick="signUpOn()">
+            Get started for free →
+          </button>
+        </div>
+        <img id="image" src="Images\7.png" alt="Main Image here" />
+      </div>
+      <div class="box">
+        <div class="ele1">
+          <h1 id="heading">
+            Brutask is less like a <br />
+            and more like <br />
+            <span style="font-family: Manrope, sans-serif; color: #0eb770" ;
+              >your virtual office!</span
+            >
+          </h1>
+        </div>
+        <div class="ele2">
+          <p
+            style="
+              font-family: Manrope, sans-serif;
+              color: #f8db5e;
+              font-size: 70px;
+              font-weight: 800;
+            "
+          >
+            We’ve<br />
+            cracked the<br />
+            code of<span
+              style="
+                font-family: Manrope, sans-serif;
+                color: whitesmoke;
+                font-size: 70px;
+                font-weight: 800;
+              "
+            >
+              remote </span
+            ><br /><span
+              style="
+                font-family: Manrope, sans-serif;
+                color: white;
+                font-size: 70px;
+                font-weight: 800;
+              "
+              >working</span
+            >
+            for<br />
+            teams
+          </p>
+          <img src="Images/images.png" alt="1" />
+        </div>
+        <div class="midBox">
+          It’s more than work. It’s a way of working together. Start with a
+          Trello board, lists, and cards. Customize and expand with more
+          features as your teamwork grows. Manage projects, organize tasks, and
+          build team spirit—all in one place.
+          <!-- <div></div>
+          <div></div>
+          <div></div> -->
+        </div>
+      </div>
+      <div class="box">
+        <div class="ele">
+          <h1>What are you waiting for?</h1>
+        </div>
+        <h2
+          style="
+            text-align: center;
+            font-family: Manrope, sans-serif;
+            color: black;
+          "
+        >
+          Brutask is
+          <span style="font-family: Manrope, sans-serif; color: green"
+            >different</span
+          >
+          <br />
+        </h2>
+        <h3>
+          Other task managers are all about project progress, Brutask focuses on
+          increasing individual productivity, that ultimately improves team
+          efficiency.
+        </h3>
+
+        <button id="button" onclick="signUpOn()">Sign Up now !</button>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
+    import {
+      getAuth,
+      createUserWithEmailAndPassword,
+      signInWithEmailAndPassword,
+      GoogleAuthProvider,
+      signInWithPopup,
+    } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCGwfjK3eD5l56-RSof9rn5cJgEVrC6Udc",
+      authDomain: "to-do-project-ff177.firebaseapp.com",
+      projectId: "to-do-project-ff177",
+      storageBucket: "to-do-project-ff177.appspot.com",
+      messagingSenderId: "38152615990",
+      appId: "1:38152615990:web:02d255d08822c59a300097",
+    };
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth();
+    const provider = new GoogleAuthProvider();
+    const signUp = document.getElementById("signUpForm");
+    const login = document.getElementById("loginForm");
+    const googleImg = document.getElementById("gImg");
+    signUp.addEventListener("submit", async (a) => {
+      a.preventDefault();
+      var email = document.querySelector('[type="email"]').value;
+      var password = document.querySelector('[type="password"]').value;
+      createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          const user = userCredential.user;
+          window.location.href = "to_do_index.html";
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          alert(errorMessage);
+        });
+    });
+    login.addEventListener("submit", async (a) => {
+      a.preventDefault();
+      var email = document.querySelector('[type="email"]').value;
+      var password = document.querySelector('[type="password"]').value;
+      signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          const user = userCredential.user;
+          window.location.href = "to_do_index.html";
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          alert(errorMessage);
+        });
+    });
+
+    googleImg.addEventListener("click", () => {
+      signInWithPopup(auth, provider)
+        .then((result) => {
+          const credential = GoogleAuthProvider.credentialFromResult(result);
+          const token = credential.accessToken;
+          const user = result.user;
+          window.location.href = "to_do_index.html";
+        })
+        .catch((error) => {
+          // Handle Errors here.
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          // The email of the user's account used.
+          const email = error.customData.email;
+          // The AuthCredential type that was used.
+          const credential = GoogleAuthProvider.credentialFromError(error);
+          // ...
+        });
+    });
+  </script>
+</html>
