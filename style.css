@@ -46,13 +46,14 @@ li a:hover {
 }
 
 .box {
-    margin-top: 5px;
+    margin-top: 9.2vw;
+    margin-left: 2.5vw;
     /* border: solid black; */
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0;
+    gap: 0; */
 }
 
 .firstBox {
@@ -81,11 +82,10 @@ li a:hover {
 }
 
 .midBox {
-    /* border: solid black; */
-    width: 85%;
-    height: 250px;
-    margin-top: 16%;
+    width: 37%;
+    height: 254px;
     margin-bottom: 10px;
+    margin-top: -6vw;
 }
 
 #button {
@@ -178,45 +178,43 @@ button {
 
 }
 
-#heading{
-    font-size: 45px;
-    font-family: Manrope,sans-serif;
-    font-weight: 900;
+.ele1{
+    display: flex;
+    justify-content: space-between;
+    /* border: \\; */
 }
 
-.ele1{
-    display: inline-block;
-    padding-right: 60%;
-    margin-top: 3%;
+.ele1 p{
+
+    font-family: Manrope, sans-serif;
+    color: #f8db5e;
+    font-size: 4.5vw;
+    font-weight: 800;
+    border: 4px solid green;
+    border-radius: 34px;
+    background-color: #286251;
+    padding: 4vw;
+    height: 29vw;
+    text-align: left;
+    margin-left: 6vw;
+
+}
+
+.midBox img{
+   width: 33vw;
+}
+
+#heading{
+    font-size: 3.7vw;
+    font-family: Manrope,sans-serif;
+    font-weight: 900;
+    padding-left: 8vw;
+
 }
 
 .ele2{
-    background-color: #286251;
-    border: 4px solid green;
-    border-radius: 25px;
-    display: inline-block;
-    height: 71vh;
-    width: 25vw;
-    margin-top: 3%;
-    margin-left: -50%;
-    padding: 0px 58px 79px;
-}
-
-
-.ele2 p{
-    text-align: left;
-}
-.ele2 img{
-    position: relative;
-    left: 189%;
-    bottom: 75%;
-    width: 120%;
-    /* overflow: hidden; */
-    
-}
-
-.ele h2{
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 button {
